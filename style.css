@@ -1,6 +1,6 @@
 /*Global -----------------------*/
 :root{
-    --dar-blue: #363f5f;
+    --dark-blue: #363f5f;
 }
 * {
     margin: 0;
@@ -18,7 +18,7 @@ body{
 h2{
     margin-top: 3.2rem;
     margin-bottom: 0.8rem;
-    color: var(--dar-blue);
+    color: var(--dark-blue);
     font-weight: normal;
 }
 /*Header -----------------------*/
@@ -45,7 +45,7 @@ header h1 {
     padding: 1.5rem 2rem;
     border-radius: 0.25rem;
     margin-bottom: 2rem;
-    color: var(--dar-blue);
+    color: var(--dark-blue);
 }
 .card h3 {
     font-weight: normal;
@@ -80,17 +80,28 @@ table th {
     text-align: left;
     padding: 1rem 2rem;
 }
-table tr{
+table tbody tr{
     opacity: 0.7;
 }
-table tr:hover{
+table tbody tr:hover{
     opacity: 1;
 }
 table td {
     background: white;
     padding: 1rem 2rem;
 }
+td.description {
+    color: var(--dark-blue);
+}
+td.income{
+    color: #12a454;
+}
+td.expense{
+    color: #e92929;
+}
 /*Footer -----------------------*/
 footer{
     text-align: center;
+    padding: 4rem 0 2rem;
+    color: var(--dark-blue);
 }
