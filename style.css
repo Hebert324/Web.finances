@@ -23,7 +23,7 @@ h2{
 }
 /*Header -----------------------*/
 header {
-    background-color: #2d4a22;
+    background-image: linear-gradient(to right, rgba(0, 17, 255, 0.788), #49AA26);
     padding: 2rem 0 10rem;
     text-align: center;
 }
