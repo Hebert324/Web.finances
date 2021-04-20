@@ -60,7 +60,7 @@ header h1 {
 }
 /*Balance -----------------------*/
 #balance {
-    margin-top: -8rem;
+    margin-top: -6rem;
 }
 #balance h2 {
     color: white;
@@ -91,6 +91,11 @@ header h1 {
     color: white;
 }
 /*Table -----------------------*/
+#transaction{
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+}
 #data-table {
     width: 100%;
     border-spacing: 0 0.5rem;
@@ -129,6 +134,27 @@ td.income{
 td.expense{
     color: #e92929;
 }
+/*Modal -----------------------*/
+.modal-overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    opacity: 0;
+    visibility: hidden;
+}
+.modal-overlay.active{
+    opacity: 1;
+    visibility: visible;
+}
+.modal{
+    background-color: #f0f2f5;
+    padding: 2.4rem;
+}
 /*Footer -----------------------*/
 footer{
     text-align: center;
@@ -136,3 +162,13 @@ footer{
     color: var(--dark-blue);
 }
 /*Responsive -----------------------*/
+@media (min-width: 800px){
+    html{
+        font-size: 87.75%;
+    }
+    #balance{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+    }
+}
