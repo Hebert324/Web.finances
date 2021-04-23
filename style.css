@@ -81,9 +81,8 @@ header {
     padding: 2rem 0 10rem;
     text-align: center;
 }
-header h1 {
-    color: white;
-    font-weight: 100;
+header img{
+    width: 172px;
 }
 /*Balance -----------------------*/
 #balance {
