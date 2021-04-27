@@ -6,7 +6,7 @@ const Modal = {
 
     .classList.add('active')
   },
-  
+
   close(){
     // Fechar modal
     // Remove a class active no modal
@@ -15,31 +15,18 @@ const Modal = {
     .classList.remove('active')
   }
 }
+
+const Storage = {
+  get() {
+    return JSON.parse(localStorage.getItem("Web.finances:transactions")) || []
+},
+
+set(transactions) {
+    localStorage.setItem("Web.finances:transactions", JSON.stringify(transactions))
+}
+}
 const Transaction = {
-  all: [
-    // Aqui nós colocamos os dados no JS
-    {
-      description: 'Luz', 
-      amount: -50001, 
-      date: '20/01/2021',
-    },
-    {
-      description: 'Website', 
-      amount: 500000, 
-      date: '23/01/2021',
-    },
-    {
-      description: 'Internet', 
-      amount: -20012, 
-      date: '26/01/2021',
-    },
-    {
-      description: 'App', 
-      amount: 200000, 
-      date: '28/01/2021',
-    },
-  
-  ],
+  all: Storage.get(),
 
   add(transaction){
     Transaction.all.push(transaction)
@@ -128,7 +115,7 @@ const DOM = {
 const Utils = {
   formatAmount(value){
     value = Number(value) * 100
-    return value
+    return Math.round(value)
   },
 
   formatDate(date){
@@ -219,11 +206,11 @@ const Form = {
 const App = {
   init() {
     //for each significa para cada no inglês
-    Transaction.all.forEach(function(transaction, index){
-    DOM.addTransaction(transaction, index)
-})
-  DOM.updateBalance()
-  
+    Transaction.all.forEach(DOM.addTransaction)
+
+    DOM.updateBalance()
+    
+    Storage.set(Transaction.all)
   },
 
   reload() {
