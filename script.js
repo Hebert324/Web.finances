@@ -14,32 +14,31 @@ const Modal = {
     .classList.remove('active')
   }
 }
-const transactions = [
-  // Aqui nós colocamos os dados no JS
-  {
-    description: 'Luz', 
-    amount: -50001, 
-    date: '20/01/2021',
-  },
-  {
-    description: 'Website', 
-    amount: 500000, 
-    date: '23/01/2021',
-  },
-  {
-    description: 'Internet', 
-    amount: -20012, 
-    date: '26/01/2021',
-  },
-  {
-    description: 'App', 
-    amount: 200000, 
-    date: '28/01/2021',
-  },
-
-]
 const Transaction = {
-  all: transactions,
+  all: [
+    // Aqui nós colocamos os dados no JS
+    {
+      description: 'Luz', 
+      amount: -50001, 
+      date: '20/01/2021',
+    },
+    {
+      description: 'Website', 
+      amount: 500000, 
+      date: '23/01/2021',
+    },
+    {
+      description: 'Internet', 
+      amount: -20012, 
+      date: '26/01/2021',
+    },
+    {
+      description: 'App', 
+      amount: 200000, 
+      date: '28/01/2021',
+    },
+  
+  ],
   add(transaction){
     Transaction.all.push(transaction)
 
