@@ -14,6 +14,7 @@ const Modal = {
     .classList.remove('active')
   }
 }
+
 const Transaction = {
   all: [
     // Aqui nós colocamos os dados no JS
@@ -39,16 +40,19 @@ const Transaction = {
     },
   
   ],
+
   add(transaction){
     Transaction.all.push(transaction)
 
     App.reload()
   },
+
   remove(index){
     Transaction.all.splice(index, 1)
     
     App.reload()
   },
+
   incomes(){
     let income = 0
     //pegar todas as transações
@@ -62,6 +66,7 @@ const Transaction = {
 
     return income
   },
+
   expenses(){
     let expense = 0
     Transaction.all.forEach(function(transaction){
@@ -72,10 +77,12 @@ const Transaction = {
 
     return expense
   },
+
   total(){
     return Transaction.incomes() + Transaction.expenses()
   }
 }
+
 // Substituir os dados do HTML com os dados do JS
 const DOM = {
   transactionsContainer: document.querySelector('#data-table tbody'),
@@ -114,6 +121,7 @@ const DOM = {
     DOM.transactionsContainer.innerHTML = ""
   }
 }
+
 //fazendo a formatacão do texto para o format BR: R$10,00
 const Utils = {
   formatCurrency(value){
@@ -131,6 +139,11 @@ const Utils = {
     return signal + value
   }
 }
+
+const Form = {
+  
+}
+
 const App = {
   init() {
     //for each significa para cada no inglês
