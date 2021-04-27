@@ -3,63 +3,138 @@ const Modal = {
     // Abrir modal
     // Adiciona a class active no modal
     document.querySelector('.modal-overlay')
+
     .classList.add('active')
   },
   close(){
     // Fechar modal
     // Remove a class active no modal
     document.querySelector('.modal-overlay')
+
     .classList.remove('active')
   }
 }
 const transactions = [
   // Aqui nós colocamos os dados no JS
   {
-    id: 1, 
     description: 'Luz', 
-    amount: -50000, 
+    amount: -50001, 
     date: '20/01/2021',
   },
   {
-    id: 2, 
     description: 'Website', 
-    amount: 5000000, 
+    amount: 500000, 
     date: '23/01/2021',
   },
   {
-    id: 1, 
     description: 'Internet', 
-    amount: -20000, 
+    amount: -20012, 
     date: '26/01/2021',
+  },
+  {
+    description: 'App', 
+    amount: 200000, 
+    date: '28/01/2021',
   },
 
 ]
 const Transaction = {
+  all: transactions,
   incomes(){
-    // Somar as entradas
+    let income = 0
+    //pegar todas as transações
+    Transaction.all.forEach(function(transaction){
+      //se ela for maior que zero
+      if (transaction.amount > 0){
+        //somar a uma variavel e retornar a variavel
+        income += transaction.amount
+      }
+    })
+
+    return income
   },
   expenses(){
-    // Somar as saídas
+    let expense = 0
+    Transaction.all.forEach(function(transaction){
+      if (transaction.amount < 0){
+        expense += transaction.amount
+      }
+    })
+
+    return expense
   },
   total(){
-    // Entradas menos saídas
+    return Transaction.incomes() + Transaction.expenses()
   }
 }
 // Substituir os dados do HTML com os dados do JS
 const DOM = {
+  transactionsContainer: document.querySelector('#data-table tbody'),
+
   addTransaction(transaction, index){
-    const tr = document.createElement("tr")
-    tr.innerHTML = DOM.innerHTMLTransaction(transaction) 
+    const tr = document.createElement('tr')
+
+    tr.innerHTML = DOM.innerHTMLTransaction(transaction)
+
+    DOM.transactionsContainer.appendChild(tr)
   },
   innerHTMLTransaction(transaction){
-    
+    const CSSclass = transaction.amount > 0 ? "income" : "expense"
+
+    const amount = Utils.formatCurrency(transaction.amount)
+
     const html = `
-      <td class="description">Luz</td>
-      <td class="expense">-R$ 500,00</td>
-      <td class="date">20/01/2021</td>
+      <td class="description">${transaction.description}</td>
+      <td class=${CSSclass}>${amount}</td>
+      <td class="date">${transaction.date}</td>
       <td><img src="assets/minus.svg" alt=transação"></td>
     `
     return html
+  },
+  updateBalance(){
+    document.getElementById("incomeDisplay")
+    .innerHTML = Utils.formatCurrency(Transaction.incomes())
+
+    document.getElementById("expenseDisplay")
+    .innerHTML = Utils.formatCurrency(Transaction.expenses())
+
+    document.getElementById("totalDisplay")
+    .innerHTML = Utils.formatCurrency(Transaction.total())
+  },
+  clearTransactions(){
+    DOM.transactionsContainer.innerHTML = ""
   }
 }
-DOM.addTransaction(transactions[0])
+//fazendo a formatacão do texto para o format BR: R$10,00
+const Utils = {
+  formatCurrency(value){
+    const signal = Number(value) < 0 ? "-" : ""
+
+    value = String(value).replace(/\D/g, "")
+
+    value = Number(value) / 100
+
+    value = value.toLocaleString("pt-BR",{
+      style: "currency",
+      currency:"BRL"
+    })
+
+    return signal + value
+  }
+}
+const App = {
+  init() {
+    //for each significa para cada no inglês
+    Transaction.all.forEach(function(transaction){
+    DOM.addTransaction(transaction)
+})
+  DOM.updateBalance()
+
+  },
+  reload() {
+    DOM.clearTransactions()
+    App.init()
+  },
+}
+
+App.init()
