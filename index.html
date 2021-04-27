@@ -8,15 +8,26 @@
     <title>Web.Finance$</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="https://www.flaticon.com/svg/vstatic/svg/584/584026.svg?token=exp=1619536310~hmac=4afb9596b55907d18fb8a02813aa51bf" type="image/x-icon">
 </head>
 
 <body>
     <header>
         <img src="assets/logo.png" alt="Logo web Finances">
+        <div id="toggle">
+            <input id="switch" type="checkbox" name="theme">
+            <label for="switch"></label>
+        </div>
+        <div id="profile">
+            <a href="#" id="avatar-profile">
+                <p>Hebert <span>Ver perfil</span></p>
+                <img
+                  src="https://avatars.githubusercontent.com/u/70274409?v=4"
+                />
+              </a>
+        </div>
     </header>
-
     <main class="container">
         <section id="balance">
             <h2 class="sr-only">Balanço</h2>
@@ -92,7 +103,7 @@
     </div>
 
     <footer>
-        <p>dev.finance$</p>
+        <p>web.finance$</p>
     </footer>
     <script src="script.js"></script>
 </body>

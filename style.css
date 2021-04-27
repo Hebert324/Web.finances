@@ -2,6 +2,12 @@
 :root{
     --dark-blue: #363f5f;
     --green: #49AA26;
+    --bg:#f0f2f5;
+    --bg-table: white;
+    --bg-text: #363f5f;
+    --bg-card: white;
+    --azul:#0011ffd8;
+    --black:black;
 }
 * {
     margin: 0;
@@ -13,7 +19,7 @@ html{
 }
 body{
     font-family: 'Poppins', sans-serif;
-    background-color: #f0f2f5;
+    background-color: var(--bg);
 }
 /*Tittles -----------------------*/
 .container {
@@ -37,9 +43,59 @@ h2{
     color: var(--dark-blue);
     font-weight: normal;
 }
+/*Botão dark mode*/
+#toggle{
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    top: 15px;
+    margin: auto;
+}
+input[type=checkbox]{
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 50px;
+    height: 22px;
+    background: white;
+    float: right;
+    border-radius: 100px;
+    position: relative;
+}
+
+label::after{
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    border-radius: 90px;
+    transition: 0.3s;
+}
+
+input:checked + label {
+    background-color: black;
+}
+
+input:checked + label::after {
+    background-color: white;
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+}
+
+label:active:after {
+    width: 45px;
+}
 /*Links & Buttons -----------------------*/
 a{
-    color: var(--green);
+    color: #49AA26;
     text-decoration: none;
 }
 a:hover{
@@ -70,18 +126,25 @@ button:hover{
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0.7;
+    opacity: 0.8;
 }
 .button.cancel:hover{
     opacity: 1;
 }
+.excluir:hover{
+    -webkit-transform: scale(1.0);
+    transform: scale(1.1);
+}
 /*Header -----------------------*/
 header {
-    background-image: linear-gradient(to right, rgba(0, 17, 255, 0.788), var(--green));
+    background-image: linear-gradient(to right, var(--azul), var(--green));
     padding: 2rem 0 10rem;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 header img{
+    margin-left: 2rem;
     width: 172px;
 }
 /*Balance -----------------------*/
@@ -94,11 +157,11 @@ header img{
 }
 /*Cards -----------------------*/
 .card {
-    background-color: white;
+    background-color: var(--bg-card);
     padding: 1.5rem 2rem;
     border-radius: 0.25rem;
     margin-bottom: 2rem;
-    color: var(--dark-blue);
+    color: var(--bg-text);
 }
 .card h3 {
     font-weight: normal;
@@ -113,8 +176,14 @@ header img{
     margin-top: 1rem;
 }
 .card.total {
-    background-color: var(--green);
+    background-color: #49AA26;
     color: white;
+}
+.card:hover{
+    -webkit-transform: scale(1.0);
+    transform: scale(1.1);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.568)
+    
 }
 /*Table -----------------------*/
 #transaction{
@@ -125,7 +194,7 @@ header img{
 #data-table {
     width: 100%;
     border-spacing: 0 0.5rem;
-    color: #969cb3;
+    color: var(--bg-text);
 }
 th:first-child, 
 td:first-child{
@@ -136,23 +205,23 @@ td:last-child{
     border-radius: 0 0.25rem 0.25rem 0;
 }
 table th {
-    background: white;
+    background: var(--bg-table);
     font-weight: normal;
     text-align: left;
     padding: 1rem 2rem;
 }
 table tbody tr{
-    opacity: 0.7;
+    opacity: 0.8;
 }
 table tbody tr:hover{
     opacity: 1;
 }
 table td {
-    background: white;
+    background: var(--bg-table);
     padding: 1rem 2rem;
 }
 td.description {
-    color: var(--dark-blue);
+    color: var(--bg-text);
 }
 td.income{
     color: #12a454;
@@ -213,7 +282,7 @@ input{
 footer{
     text-align: center;
     padding: 4rem 0 2rem;
-    color: var(--dark-blue);
+    color: var(--bg-text);
 }
 /*Responsive -----------------------*/
 @media (min-width: 800px){
@@ -226,3 +295,45 @@ footer{
         gap: 2rem;
     }
 }
+ /* avatar */
+#profile{
+    margin-right: 2rem;
+}
+#avatar-profile {
+    display: flex;
+    align-items: right;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    text-align: right;
+  }
+  
+  #avatar-profile p {
+    font-size: 1.25rem; /* 20px of 16px root*/
+    line-height: 1.875rem; /*30px of 16px root*/
+    margin-right: 1.25rem;
+  
+    font-weight: 600;
+  }
+  
+  #avatar-profile span {
+    display: block;
+  
+    font-weight: normal;
+    font-size: 0.875rem; /* 14px of 16px root*/
+    line-height: 1.5rem; /* 24px of 16px root*/
+  
+    font-weight: 400;
+  }
+  
+  #avatar-profile p span:hover {
+    text-decoration: underline;
+    color:var(--color-secondary);
+  }
+  
+  #avatar-profile img {
+    width: 4rem; /* 64px of 16px root*/
+    height: 4rem; /* 64px of 16px root*/
+    border-radius: 50%;
+    border: 0.156rem solid var(--black); /* 2.5px of 16px root*/
+  }

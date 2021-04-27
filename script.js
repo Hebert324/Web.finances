@@ -92,7 +92,7 @@ const DOM = {
       <td class="description">${transaction.description}</td>
       <td class=${CSSclass}>${amount}</td>
       <td class="date">${transaction.date}</td>
-      <td><img onclick="Transaction.remove(${index})" src="assets/minus.svg" alt=transação"></td>
+      <td><img class="excluir" onclick="Transaction.remove(${index})" src="assets/minus.svg" alt=transação"></td>
     `
     return html
   },
@@ -220,3 +220,42 @@ const App = {
 }
 
 App.init()
+
+//dark mode 
+const html = document.querySelector("html")
+const checkbox = document.querySelector("input[name=theme]")
+
+const getStyle = (element, style) => 
+    window.getComputedStyle(element).getPropertyValue(style)
+
+
+const initialColors = {
+    bg: getStyle(html, "--bg"),
+    bgTable: getStyle(html, "--bg-table"),
+    bgText: getStyle(html, "--bg-text"),
+    bgCard: getStyle(html, "--bg-card-white"),
+    azul: getStyle(html, "--azul"),
+    green: getStyle(html, "--green"),
+    black: getStyle(html, "--black"),
+}
+
+const darkMode = {
+    bg: "#222222",
+    bgTable: "#434343",
+    bgText: "white",
+    bgCard: "#444444",
+    azul:"#484848",
+    green: "black",
+    black: "#49AA26",
+}
+
+const tranformKey = key => "--" + key.replace(/([A-Z])/, "-$1").toLowerCase()
+
+const changeColors = (colors) =>{
+    Object.keys(colors).map(key =>
+        html.style.setProperty(tranformKey(key),colors[key]))
+}
+
+checkbox.addEventListener("change", ({target}) => {
+    target.checked ? changeColors(darkMode) : changeColors(initialColors)
+})
