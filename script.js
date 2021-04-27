@@ -40,6 +40,16 @@ const transactions = [
 ]
 const Transaction = {
   all: transactions,
+  add(transaction){
+    Transaction.all.push(transaction)
+
+    App.reload()
+  },
+  remove(index){
+    Transaction.all.splice(index, 1)
+    
+    App.reload()
+  },
   incomes(){
     let income = 0
     //pegar todas as transações
