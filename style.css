@@ -284,17 +284,6 @@ footer{
     padding: 4rem 0 2rem;
     color: var(--bg-text);
 }
-/*Responsive -----------------------*/
-@media (min-width: 800px){
-    html{
-        font-size: 87.75%;
-    }
-    #balance{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 2rem;
-    }
-}
  /* avatar */
 #profile{
     margin-right: 2rem;
@@ -337,3 +326,36 @@ footer{
     border-radius: 50%;
     border: 0.156rem solid var(--black); /* 2.5px of 16px root*/
   }
+  /*Responsive -----------------------*/
+@media (min-width: 800px){
+    html{
+        font-size: 87.75%;
+    }
+    #balance{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+    }
+}
+@media (max-width: 650px){
+    #avatar-profile{
+        visibility: none;
+        opacity: 0;
+    }
+    #toggle{
+        margin-top:70px;
+        text-align:center;
+        margin-left: 15px;
+    }
+    header{
+        display: block;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: auto;
+    }
+    header img{
+        margin-left: 0;
+        margin-top: 15px;
+    }
+}
