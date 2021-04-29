@@ -48,6 +48,7 @@ h2{
     position: absolute;
     left: 50%;
     right: 50%;
+    top: 20px;
 }
 #switch[type=checkbox]{
     height: 0;
