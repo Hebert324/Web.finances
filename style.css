@@ -328,7 +328,7 @@ footer{
 #menu{
     background-color: rgb(17, 17, 17);
     width: 100%;
-    height: 80%;
+    height: 100%;
     position: absolute;
     top: 0;
     visibility: hidden;
@@ -345,11 +345,7 @@ footer{
     padding: 20px 5px;
 }
 .link-nav:hover{
-    background-color:rgb(14, 14, 14);
     color: white;
-}
-#label-nav:hover{
-    background-color:rgba(14, 14, 14, 0.301);
 }
 #label-nav{
     padding: 15px;
@@ -373,11 +369,11 @@ footer{
 }
 /*Button 2*/
 #toggle2{
-    position: absolute;
+    display: flex;
     bottom: 55.5%;
     color: white;
     margin: auto;
-    left: 40%;
+    margin-top: 285px;
 }
 #button-dark2{
     margin: auto;
