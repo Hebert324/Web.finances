@@ -1,6 +1,5 @@
 /*Global -----------------------*/
 :root{
-    --dark-blue: #363f5f;
     --green: #49AA26;
     --bg:#f0f2f5;
     --bg-table: white;
@@ -40,8 +39,13 @@ body{
 h2{
     margin-top: 3.2rem;
     margin-bottom: 0.8rem;
-    color: var(--dark-blue);
+    color: var(--bg-text);
     font-weight: normal;
+}
+.help{
+    color: var(--bg-text);
+    font-size: 13px;
+    opacity: 0.7;
 }
 /*Botão dark mode*/
 #toggle{
@@ -247,7 +251,7 @@ td.expense{
     visibility: visible;
 }
 .modal{
-    background-color: #f0f2f5;
+    background-color: var(--bg);
     padding: 2.4rem;
 }
 /*Form -----------------------*/
@@ -262,6 +266,9 @@ input{
     border-radius: 0.2rem;
     padding: 0.8rem;
     width: 100%;
+    background-color: var(--bg-table);
+    color: white;
+    
 }
 .input-group{
     margin-top: 0.8rem;
