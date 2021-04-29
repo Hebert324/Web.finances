@@ -48,16 +48,14 @@ h2{
     position: absolute;
     left: 50%;
     right: 50%;
-    top: 15px;
-    margin: auto;
 }
-input[type=checkbox]{
+#switch[type=checkbox]{
     height: 0;
     width: 0;
     visibility: hidden;
 }
 
-label {
+#button-dark {
     cursor: pointer;
     text-indent: -9999px;
     width: 50px;
@@ -68,7 +66,7 @@ label {
     position: relative;
 }
 
-label::after{
+#button-dark::after{
     content: '';
     position: absolute;
     top: 3px;
@@ -80,18 +78,18 @@ label::after{
     transition: 0.3s;
 }
 
-input:checked + label {
+#switch:checked + #button-dark {
     background-color: black;
 }
 
-input:checked + label::after {
+#switch:checked + #button-dark::after {
     background-color: white;
     left: calc(100% - 5px);
     transform: translateX(-100%);
 }
 
-label:active:after {
-    width: 45px;
+#button-dark:active:after {
+    width: 20px;
 }
 /*Links & Buttons -----------------------*/
 a{
@@ -162,6 +160,7 @@ header img{
     border-radius: 0.25rem;
     margin-bottom: 2rem;
     color: var(--bg-text);
+    transition: 0.3s;
 }
 .card h3 {
     font-weight: normal;
@@ -297,7 +296,7 @@ footer{
     text-align: right;
   }
   
-  #avatar-profile p {
+#avatar-profile p {
     font-size: 1.25rem; /* 20px of 16px root*/
     line-height: 1.875rem; /*30px of 16px root*/
     margin-right: 1.25rem;
@@ -305,7 +304,7 @@ footer{
     font-weight: 600;
   }
   
-  #avatar-profile span {
+#avatar-profile span {
     display: block;
   
     font-weight: normal;
@@ -315,17 +314,76 @@ footer{
     font-weight: 400;
   }
   
-  #avatar-profile p span:hover {
+#avatar-profile p span:hover {
     text-decoration: underline;
     color:var(--color-secondary);
   }
   
-  #avatar-profile img {
+#avatar-profile img {
     width: 4rem; /* 64px of 16px root*/
     height: 4rem; /* 64px of 16px root*/
     border-radius: 50%;
     border: 0.156rem solid var(--black); /* 2.5px of 16px root*/
   }
+#menu{
+    background-color: rgb(17, 17, 17);
+    width: 100%;
+    height: 80%;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    display: none;
+  }
+#but{
+    width: 40px;
+  }
+
+.link-nav{
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 20px 5px;
+}
+.link-nav:hover{
+    background-color:rgb(14, 14, 14);
+    color: white;
+}
+#label-nav:hover{
+    background-color:rgba(14, 14, 14, 0.301);
+}
+#label-nav{
+    padding: 15px;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    visibility: hidden;
+}
+#lista{
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    list-style: none;
+    text-align: center;
+}
+#chec[type="checkbox"]{
+    display: none;
+}
+#chec[type="checkbox"]:checked ~ #menu{
+    display: block;
+}
+/*Button 2*/
+#toggle2{
+    position: absolute;
+    bottom: 55.5%;
+    color: white;
+    margin: auto;
+    left: 40%;
+}
+#button-dark2{
+    margin: auto;
+    pointer-events: auto;
+}
+
   /*Responsive -----------------------*/
 @media (min-width: 800px){
     html{
@@ -339,11 +397,11 @@ footer{
 }
 @media (max-width: 650px){
     #avatar-profile{
-        visibility: none;
         opacity: 0;
+        visibility: hidden;
     }
     #toggle{
-        margin-top:70px;
+        margin-top: 10px;
         text-align:center;
         margin-left: 15px;
     }
@@ -357,5 +415,14 @@ footer{
     header img{
         margin-left: 0;
         margin-top: 15px;
+    }
+    #menu{
+        visibility: visible;
+    }
+    #label-nav{
+        visibility: visible;
+    }
+    #toggle{
+        display: none;
     }
 }
