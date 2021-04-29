@@ -109,7 +109,7 @@ button{
     height: 50px;
     border: none;
     color: white;
-    background-color: var(--green);
+    background-color: #49AA26;
     padding: 0;
     border-radius: 0.10rem;
     cursor: pointer;
