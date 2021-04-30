@@ -7,8 +7,12 @@
 <img src="https://i.pinimg.com/originals/b8/48/d5/b848d5d9bb221592064de0f356f61676.png" alt="rails" width="40" height="40" style="max-width:100%;"></img>
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="rails" width="40" height="40" style="max-width:100%;"></img>
 
-## :camera: Veja: 
+## :camera: Demonstração do projeto: 
 <img alt="gif" src="https://github.com/Hebert324/Web.finances/blob/main/gif/web.finance.gif">
+
+## Projeto:
+
+#### GoFinances uma aplicação financeira para gerenciando transações.
 
 ## Alterações que eu fiz:
 
