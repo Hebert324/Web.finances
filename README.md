@@ -1,6 +1,5 @@
-# webFinances
-
-### Projeto dev.finance$ construido junto com a equipe da <a href="https://rocketseat.com.br">Rocketseat.</a>
+# webFinance$
+## web.finance$ uma aplicação financeira para gerenciando transações.
 
 ## Tecnologias utilizadas no projeto:
 <img src="https://i.pinimg.com/originals/c5/73/ff/c573ff5552d6da9a1d28ec4e27cd1445.png" alt="rails" width="40" height="40" style="max-width:100%;"></img>
@@ -12,10 +11,10 @@
 
 ## Projeto:
 
-#### GoFinances uma aplicação financeira para gerenciando transações.
-
 ## Alterações que eu fiz:
 
 #### Adicionei um botão para ativar o modo DarkMode, criei um menu lateral para o site reesponsivo para o celular.
+
+### Projeto dev.finance$ construido junto com a equipe da <a href="https://rocketseat.com.br">Rocketseat.</a>
 
 ### Acesse o projeto aqui: <a href="https://hebert324.github.io/Web.finances/">Web.finance$</a>
