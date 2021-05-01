@@ -117,11 +117,13 @@ a {
   
     width: 22rem;
   
-    margin-right: 8rem;
+    margin-left: 8rem;
+    margin-top: 0px;
   
     text-align: center;
   
-    padding: 3.875rem 4.625rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
   
   aside img {
@@ -155,6 +157,7 @@ a {
   
   main {
     flex: 1;
+    margin-bottom: 15px;
   }
   #data-table{
     color: #363f5f;
@@ -536,7 +539,7 @@ input {
   }
   aside.card{
     margin: auto;
-    width: 25rem;
+    width: 30rem;
   }
   .legend1{
     text-align: center;
