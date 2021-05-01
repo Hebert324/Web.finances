@@ -258,7 +258,3 @@ const tranformKey = key => "--" + key.replace(/([A-Z])/, "-$1").toLowerCase()
 checkbox.addEventListener("change", ({target}) => {
     target.checked ? changeColors(darkMode) : changeColors(initialColors)
 })
-
-function perfil(){
-  alert("Função de perfil está em construção 🚧")
-}

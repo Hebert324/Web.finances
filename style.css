@@ -267,7 +267,7 @@ input{
     padding: 0.8rem;
     width: 100%;
     background-color: var(--bg-table);
-    color: white;
+    color: var(--bg-text);
     
 }
 .input-group{
