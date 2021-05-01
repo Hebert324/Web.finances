@@ -43,7 +43,7 @@ h2{
     font-weight: normal;
 }
 .help{
-    color: var(--bg-text);
+    color: #c2c2c2;
     font-size: 13px;
     opacity: 0.7;
 }
@@ -268,7 +268,7 @@ input{
     padding: 0.8rem;
     width: 100%;
     background-color: var(--bg-table);
-    color: var(--bg-text);
+    color: #707070;
     
 }
 .input-group{
