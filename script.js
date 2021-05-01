@@ -221,6 +221,8 @@ const App = {
 
 App.init()
 
+const tranformKey = key => "--" + key.replace(/([A-Z])/, "-$1").toLowerCase()
+
 //dark mode 
 const html = document.querySelector("html")
 const checkbox = document.querySelector("input[name=theme]")
@@ -253,8 +255,6 @@ const changeColors = (colors) =>{
       html.style.setProperty(tranformKey(key),colors[key]))
 }
 
-const tranformKey = key => "--" + key.replace(/([A-Z])/, "-$1").toLowerCase()
-
 checkbox.addEventListener("change", ({target}) => {
-    target.checked ? changeColors(darkMode) : changeColors(initialColors)
+  target.checked ? changeColors(darkMode) : changeColors(initialColors)
 })
