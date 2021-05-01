@@ -1,63 +1,4 @@
-/*Profile------------------------------------------------------------------------------------------*/
-#page-profile .page-header ~ .container {
-    display: flex;
-  }
-  
-  aside.card {
-    background: var(--color-card-background);
-    color: var(--color-card-title);
-  
-    border: 1px solid #E1E3E6;
-    border-radius: .313rem;
-  
-    width: 22rem;
-  
-    margin-right: 8rem;
-  
-    text-align: center;
-  
-    padding: 3.875rem 4.625rem;
-  }
-  
-  aside img {
-    border-radius: 50%;
-  
-    border: .25rem #49AA26 solid;
-  
-    width: 11.25rem;
-    height: 11.25rem;
-  
-    margin-bottom: 1.5rem;
-  }
-  
-  aside h2 {
-    font-family: IBM Plex Sans;
-    font-weight: 600;
-    font-size: 1.75rem;
-    line-height: 1.875rem;
-  
-  
-    margin-bottom: 3.875rem;
-  }
-  
-  aside p {
-    margin-bottom: 1.75rem;
-  
-    font-family: Inter;
-    font-weight: 400;
-    font-size: 1.25rem;
-    line-height: 1.875rem;
-  }
-  
-  main {
-    flex: 1;
-  }
-  #data-table{
-    color: #363f5f;
-  }
 /*Main------------------------------------------------------------------------------------------*/
-
-/* global remove user-agent styling */
 * {
   margin: 0;
   padding: 0;
@@ -66,7 +7,14 @@
 
 /* custom vars */
 :root {
-  --color-background: #F0F2F5;
+  --bg:#f0f2f5;
+  --green: #49AA26;
+  --bg-table: white;
+  --bg-text: #363f5f;
+  --bg-card: white;
+  --azul:#0011ffd8;
+  --black:black;
+
   --color-text: #FCFDFF;
 
   --color-primary: #41414C;
@@ -121,7 +69,7 @@
 
 /* tags styling */
 body {
-  background: var(--color-background);
+  background: var(--bg);
 }
 
 body,
@@ -142,18 +90,6 @@ a {
   margin: 0 auto;
 }
 
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
-}
-
 .separator {
   height: 1px;
   background-color: var(--color-hairline-in-dark);
@@ -167,6 +103,62 @@ a {
 .flex {
   display: flex;
 }
+/*Profile------------------------------------------------------------------------------------------*/
+#page-profile .page-header ~ .container {
+    display: flex;
+  }
+  
+  aside.card {
+    background: var(--color-card-background);
+    color: var(--color-card-title);
+  
+    border: 1px solid #E1E3E6;
+    border-radius: .313rem;
+  
+    width: 22rem;
+  
+    margin-right: 8rem;
+  
+    text-align: center;
+  
+    padding: 3.875rem 4.625rem;
+  }
+  
+  aside img {
+    border-radius: 50%;
+  
+    border: .25rem #49AA26 solid;
+  
+    width: 11.25rem;
+    height: 11.25rem;
+  
+    margin-bottom: 1.5rem;
+  }
+  
+  aside h2 {
+    font-weight: 600;
+    font-size: 1.75rem;
+    line-height: 1.875rem;
+  
+  
+    margin-bottom: 3.875rem;
+  }
+  
+  aside p {
+    margin-bottom: 1.75rem;
+  
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+  }
+  
+  main {
+    flex: 1;
+  }
+  #data-table{
+    color: #363f5f;
+  }
 /*Animations------------------------------------------------------------------------------------------*/
 @keyframes up {
   from {
@@ -225,7 +217,7 @@ a {
 .table-b{
   text-align: center;
   padding: 0.30rem;
-  background-color:var(--color-text);
+  background-color:var(--bg-text);
   border-radius: 0.313rem;
   width: 100%;
 }
@@ -256,7 +248,7 @@ button.button {
 
 .button.orange {
   background: var(--color-secondary);
-  color: var(--color-text);
+  color: var(--bg-text);
 }
 
 .button.orange:hover {
@@ -265,7 +257,7 @@ button.button {
 
 .button.green {
   background: var(--color-save);
-  color: var(--color-text);
+  color: var(--bg);
 }
 
 .button.green:hover {
@@ -283,7 +275,7 @@ button.button {
 
 .button.red {
   background: var(--color-delete);
-  color: var(--color-text);
+  color: var(--bg-text);
 }
 
 .button.red:hover {
@@ -320,13 +312,11 @@ button.button {
 }
 /*Cards*/
 .card {
-  background: var(--color-text);
+  background: var(--bg-text); 
   border-radius: 0.313rem;
   border: 1px solid #E1E3E6;
   color: #5A5A66;
-
   padding: 1.5rem;
-
   text-align: left;
 }
 
@@ -534,4 +524,21 @@ input {
   line-height: 1.625rem;
 
   color: white;
+}
+@media (max-width: 480px){
+  #page-profile .page-header ~ .container {
+    display: inline;
+  }
+  main{
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  aside.card{
+    margin: auto;
+    width: 25rem;
+  }
+  .legend1{
+    text-align: center;
+  }
 }
