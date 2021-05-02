@@ -134,11 +134,8 @@ a {
     flex: 1;
     margin-bottom: 15px;
   }
-  #data-table{
-    color: #363f5f;
-  }
 /*table------------------------------------------------------------------------------------------*/
-.table-b{
+.table{
   text-align: center;
   padding: 0.30rem;
   background-color:var(--bg-text);
@@ -194,7 +191,6 @@ form fieldset + fieldset {
 form fieldset legend {
   color: #5A5A66;
 
-  font-family: IBM Plex Sans;
   font-weight: 600;
   font-size: 2rem;
   line-height: 2.625rem;
@@ -218,7 +214,7 @@ label {
 
   font-family: IBM Plex Sans;
   font-weight: 500;
-  color: #787880;
+  color: #252836e5;
 
   margin-bottom: 1rem;
 }
@@ -237,10 +233,6 @@ input {
   width: 100%;
 
   color: #5A5A66;
-}
-
-::placeholder {
-  color: #BFBFCC;
 }
 
 /*modal------------------------------------------------------------------------------------------*/
@@ -360,6 +352,10 @@ input {
   line-height: 1.625rem;
 
   color: white;
+}
+.legend1{
+  color: #1f253a;
+  font-weight: 400;
 }
 @media (max-width: 480px){
   #page-profile .page-header ~ .container {
