@@ -288,9 +288,13 @@ input{
 }
 /*Footer -----------------------*/
 footer{
-    text-align: center;
-    padding: 4rem 0 2rem;
     color: var(--bg-text);
+    position: absolute;
+	bottom: 0;
+    right: 50%;
+    left: 50%;
+    font-size: 17px;
+    margin-bottom: 15px;
 }
  /* avatar */
 #profile{

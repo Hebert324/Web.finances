@@ -18,15 +18,11 @@
 
 /* tags styling */
 body {
-  background: var(--bg);
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg);
 }
-
-body,
-input,
-button,
-textarea {
-  font: 500 1rem Inter;
-  border: none;
+html{
+  font-size:93.75%;
 }
 
 a {
@@ -98,7 +94,6 @@ a {
   aside p {
     margin-bottom: 1.75rem;
   
-    font-family: Inter;
     font-weight: 400;
     font-size: 1.25rem;
     line-height: 1.875rem;
@@ -186,7 +181,6 @@ form .input-group .input-wrapper + .input-wrapper {
 label {
   display: inline-block;
 
-  font-family: IBM Plex Sans;
   font-weight: 500;
   color: #252836e5;
 
@@ -194,7 +188,6 @@ label {
 }
 
 input {
-  font-family: IBM Plex Sans;
   font-weight: 500;
 
   background: #FCFDFF;
@@ -230,7 +223,6 @@ input {
 .page-header.inner h1 {
   margin: 0 auto;
 
-  font-family: Inter;
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.625rem;
@@ -240,6 +232,14 @@ input {
 .legend{
   color: #1f253a;
   font-weight: 400;
+}
+#footer{
+  position: absolute;
+	bottom: 0;
+  right: 50%;
+  left: 50%;
+  font-size: 17px;
+  margin-bottom: 20px;
 }
 /*responsive------------------------------------------------------------------------------------------*/
 @media (max-width: 480px){
