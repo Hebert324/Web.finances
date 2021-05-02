@@ -225,7 +225,7 @@ table td {
     padding: 1rem 2rem;
 }
 td.description {
-    color: var(--black);
+    color: var(--bg-text);
 }
 td.income{
     color: #12a454;
@@ -285,16 +285,6 @@ input{
 .input-group.actions .button,
 .input-group.actions button{
     width: 48%;
-}
-/*Footer -----------------------*/
-footer{
-    color: var(--bg-text);
-    position: absolute;
-	bottom: 0;
-    right: 50%;
-    left: 50%;
-    font-size: 17px;
-    margin-bottom: 15px;
 }
  /* avatar */
 #profile{
