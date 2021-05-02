@@ -235,11 +235,7 @@ input {
   color: #5A5A66;
 }
 
-/*modal------------------------------------------------------------------------------------------*/
-.modal-wrapper {
-  visibility: hidden;
-  opacity: 0;
-}
+
 
 .modal-wrapper.on {
   height: 100vh;
