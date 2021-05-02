@@ -182,15 +182,6 @@ a {
   padding: 1.5rem;
   text-align: left;
 }
-.progress .badge{
-  background: #E8F8E8;
-  color: #36B336;
-}
-
-.done .badge {
-  background: #FAECEB;
-  color: var(--color-badge-done-text);
-}
 /*Forms------------------------------------------------------------------------------------------*/
 form fieldset {
   border: none;
