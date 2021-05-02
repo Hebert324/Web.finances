@@ -11,7 +11,9 @@
 
 ## Alterações que eu fiz:
 
-#### Adicionei um botão para ativar o modo DarkMode, criei um menu lateral para o site reesponsivo para o celular.
+#### Adicionei um botão para ativar o modo DarkMode, criei um menu lateral para o site reesponsivo para o celular, criei a aba de perfil.
+
+##
 
 ### Projeto dev.finance$ construido junto com a equipe da <a href="https://rocketseat.com.br">Rocketseat.</a>
 
