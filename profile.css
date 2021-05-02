@@ -233,14 +233,6 @@ input {
   color: #1f253a;
   font-weight: 400;
 }
-#footer{
-  position: absolute;
-	bottom: 0;
-  right: 50%;
-  left: 50%;
-  font-size: 17px;
-  margin-bottom: 20px;
-}
 /*responsive------------------------------------------------------------------------------------------*/
 @media (max-width: 480px){
   #page-profile .page-header ~ .container {
