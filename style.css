@@ -225,7 +225,7 @@ table td {
     padding: 1rem 2rem;
 }
 td.description {
-    color: var(--bg-text);
+    color: var(--black);
 }
 td.income{
     color: #12a454;
@@ -268,7 +268,7 @@ input{
     padding: 0.8rem;
     width: 100%;
     background-color: var(--bg-table);
-    color: #707070;
+    color: var(--black);
     
 }
 .input-group{
