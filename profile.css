@@ -1,4 +1,3 @@
-/*Main------------------------------------------------------------------------------------------*/
 * {
   margin: 0;
   padding: 0;
@@ -15,31 +14,6 @@
   --azul:#0011ffd8;
   --black:black;
 
-}
-
-/* user-agent font-size is 16px, let's make it responsive */
-@media(max-width: 1080px) {
-  html {
-    font-size: 93.75%; /* 15px */
-  }
-}
-
-@media(max-width: 970px) {
-  html {
-    font-size: 87.5%; /* 14px */
-  }
-}
-
-@media(max-width:700px) {
-  :root {
-    font-size: 75%; /* 12px */
-  }
-}
-
-@media(max-width: 590px) {
-  :root {
-    font-size: 62.25%; /* 10px */
-  }
 }
 
 /* tags styling */
@@ -235,7 +209,7 @@ input {
   color: #5A5A66;
 }
 
-/*page header------------------------------------------------------------------------------------------*/
+/*page-header------------------------------------------------------------------------------------------*/
 .page-header {
   background-image: linear-gradient(to right, #0011ffd8,#49AA26);
   width: 100vw;
@@ -263,10 +237,11 @@ input {
 
   color: white;
 }
-.legend1{
+.legend{
   color: #1f253a;
   font-weight: 400;
 }
+/*responsive------------------------------------------------------------------------------------------*/
 @media (max-width: 480px){
   #page-profile .page-header ~ .container {
     display: inline;
@@ -280,7 +255,30 @@ input {
     margin: auto;
     width: 30rem;
   }
-  .legend1{
+  .legend{
     text-align: center;
+  }
+}
+@media(max-width: 1080px) {
+  html {
+    font-size: 93.75%; /* 15px */
+  }
+}
+
+@media(max-width: 970px) {
+  html {
+    font-size: 87.5%; /* 14px */
+  }
+}
+
+@media(max-width:700px) {
+  :root {
+    font-size: 75%; /* 12px */
+  }
+}
+
+@media(max-width: 590px) {
+  :root {
+    font-size: 62.25%; /* 10px */
   }
 }
