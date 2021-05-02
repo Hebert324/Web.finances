@@ -15,31 +15,6 @@
   --azul:#0011ffd8;
   --black:black;
 
-  --color-text: #FCFDFF;
-
-  --color-primary: #41414C;
-  
-  --color-input-background: #F8F8FC;
-  --color-button-text: #FFFFFF;
-  --color-hairline-in-dark: #4F4F5B;
-  --color-hairline-in-light: #E1E3E5;
-
-  --color-card-background: var(--color-text);
-  --color-card-title: #5A5A66;
-  --color-card-label: #BFBFCC;
-  --color-card-content: #787880;
-
-  --color-cancel: #E1E3E5;
-  --color-delete: #EB3B35; 
-  --color-save: #36B336;
-  
-  --color-badge-progress-text: var(--color-save);
-  --color-badge-progress-background: #E8F8E8;
-  --color-badge-done-text: var(--color-delete);
-  --color-badge-done-background:#FAECEB;
-
-  --color-header-inner-title: var(--color-card-label)
-
 }
 
 /* user-agent font-size is 16px, let's make it responsive */
@@ -109,8 +84,8 @@ a {
   }
   
   aside.card {
-    background: var(--color-card-background);
-    color: var(--color-card-title);
+    background: #FCFDFF;
+    color: #5A5A66;
   
     border: 1px solid #E1E3E6;
     border-radius: .313rem;
@@ -162,61 +137,7 @@ a {
   #data-table{
     color: #363f5f;
   }
-/*Animations------------------------------------------------------------------------------------------*/
-@keyframes up {
-  from {
-    opacity: 0;
-    transform: translateY(35px)
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0)
-  } 
-}
-
-.animate-up {
-  transform: translateY(35px);
-  opacity: 0;
-
-  animation: up 200ms forwards;
-}
-
-@keyframes pop {
-  from {
-    opacity: 0;
-    transform: scale(0);
-
-  }
-
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-
-.animate-pop {
-  transform: scale(0);
-  opacity: 0;
-
-  animation: pop 300ms forwards;
-}
-
-.reverse {
-  animation-direction: reverse;
-}
-
-.back {
-  animation-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-.delay-1 {
-  animation-delay: 100ms;
-}
-
-.delay-2 {
-  animation-delay: 200ms;
-}
+/*table------------------------------------------------------------------------------------------*/
 .table-b{
   text-align: center;
   padding: 0.30rem;
@@ -230,7 +151,6 @@ a {
   border-radius: 0.313rem;
   border: 0;
 
-  font-family: IBM Plex Sans;
   font-weight: 700;
   font-size: 0.875rem;
   line-height: 1.625rem;
@@ -245,73 +165,13 @@ a {
   align-items: center;
 }
 
-button.button {
-  line-height: 1.5rem;
-}
-
-.button.orange {
-  background: var(--color-secondary);
-  color: var(--bg-text);
-}
-
-.button.orange:hover {
-  background: #FA9C2D
-}
-
 .button.green {
-  background: var(--color-save);
+  background: #36B336;
   color: var(--bg);
 }
 
 .button.green:hover {
   background: #3CC73C;
-}
-
-.button.gray {
-  color: var(--color-card-content);
-  background: var(--color-cancel);
-}
-
-.button.gray:hover {
-  background: #ECEEF0;
-}
-
-.button.red {
-  background: var(--color-delete);
-  color: var(--bg-text);
-}
-
-.button.red:hover {
-  background: #FA3F38;
-}
-
-.button.white {
-  background: #FCFDFF;
-  border: 1px solid #E1E3E6;
-}
-
-.button.white:hover {
-  background: #F0F2F5;
-}
-
-.button-group {
-  display: flex;
-  align-items: center;
-}
-
-.button + .button {
-  margin-left: 1rem;
-}
-
-.actions .button {
-  width: 2.5rem;
-  height: 2.5rem;
-
-  padding: 0;
-}
-
-.actions .button + button {
-  margin-left: 0.5rem;
 }
 /*Cards*/
 .card {
@@ -322,31 +182,13 @@ button.button {
   padding: 1.5rem;
   text-align: left;
 }
-
-.badge {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: fit-content;
-
-  border-radius: 2.5rem;
-  padding: 0.5rem 1.5rem;
-
-  font-weight: 500;
-  font-size: 0.875rem; /* 14px of 16px root*/
-  line-height: 1.625rem; /* 26px of 16px root*/
-
-  background-color: rgb(237, 237, 237);
-  
-}
-
 .progress .badge{
-  background: var(--color-badge-progress-background);
-  color: var(--color-badge-progress-text);
+  background: #E8F8E8;
+  color: #36B336;
 }
 
 .done .badge {
-  background: var(--color-badge-done-background);
+  background: #FAECEB;
   color: var(--color-badge-done-text);
 }
 /*Forms------------------------------------------------------------------------------------------*/
@@ -359,7 +201,7 @@ form fieldset + fieldset {
 }
 
 form fieldset legend {
-  color: var(--color-card-title);
+  color: #5A5A66;
 
   font-family: IBM Plex Sans;
   font-weight: 600;
@@ -403,7 +245,7 @@ input {
 
   width: 100%;
 
-  color: var(--color-card-title);
+  color: #5A5A66;
 }
 
 ::placeholder {
@@ -443,7 +285,7 @@ input {
 
   text-align: center;
 
-  color: var(--color-card-content);
+  color: #787880;
 }
 
 .modal img {
@@ -451,7 +293,7 @@ input {
 }
 
 .modal h3 {
-  color: var(--color-card-title);
+  color: #5A5A66;
 
   font-family: IBM Plex Sans;
   font-weight: 600;
@@ -485,7 +327,7 @@ input {
 }
 
 .modal footer button:nth-child(1) {
-  color: var(--color-card-content);
+  color: #787880;
   background: var(--color-cancel);
 }
 
