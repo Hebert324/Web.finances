@@ -1,5 +1,5 @@
 # Web.finance$
-### eb.finance$ uma aplicação financeira para gerenciando transações.
+### Web.finance$ uma aplicação financeira para gerenciando transações.
 
 ## :camera: Demonstração do projeto: 
 <img alt="gif" src="https://github.com/Hebert324/Web.finances/blob/main/gif/web.finance.gif">
