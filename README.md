@@ -1,4 +1,5 @@
-# Web.finance$
+<h1 align="center">Web.finance$</h1>
+
 ### Web.finance$ uma aplicação financeira para gerenciamento de transações, tanto entradas quantos os gastos.
 
 ## :camera: Demonstração do projeto: 
