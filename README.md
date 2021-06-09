@@ -11,8 +11,8 @@
 
 #### Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-✔️HTML
+- HTML
 
-✔️CSS
+- CSS
 
-✔️JavaScript
+- JavaScript
