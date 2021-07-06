@@ -6,8 +6,6 @@
 
 O web.finances é uma aplicação de controle financeiro, onde é possível cadastrar e excluir transações e ver o saldo de entrada e saída 💰
 
-### Acesse o projeto aqui: <a href="https://hebert324.github.io/Web.finances/">Web.finance$</a>
-
 ## :rocket: Tecnologias utilizadas:
 
 - HTML
@@ -15,3 +13,5 @@ O web.finances é uma aplicação de controle financeiro, onde é possível cada
 - CSS
 
 - JavaScript
+
+### Acesse o projeto aqui: <a href="https://hebert324.github.io/Web.finances/">Web.finance$</a>
