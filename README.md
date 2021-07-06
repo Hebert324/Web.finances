@@ -7,9 +7,7 @@
 
 ### Acesse o projeto aqui: <a href="https://hebert324.github.io/Web.finances/">Web.finance$</a>
 
-## :rocket: Tecnologias:
-
-#### Esse projeto foi desenvolvido com as seguintes tecnologias:
+## :rocket: Tecnologias utilizadas:
 
 - HTML
 
