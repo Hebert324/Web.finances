@@ -9,13 +9,11 @@ O web.finances é uma aplicação de controle financeiro, onde é possível cada
 ## :rocket: Tecnologias utilizadas:
 
 - HTML
-
 - CSS
-
 - JavaScript
 
 ### Acesse o projeto aqui: <a href="https://hebert324.github.io/Web.finances/">Web.finance$</a>
 
 ---
 
-Desenvolvido por [Hebert Rocha](https://www.linkedin.com/in/hebert-rocha-62318a1b3/) juntamente a [Rocketseat](https://app.rocketseat.com.br/dashboard) :wave: 
+Desenvolvido por [Hebert Rocha](https://www.linkedin.com/in/hebert-rc/) juntamente a [Rocketseat](https://app.rocketseat.com.br/dashboard) :wave: 
