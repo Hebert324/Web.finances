@@ -14,6 +14,10 @@ O web.finances é uma aplicação de controle financeiro, onde é possível cada
 
 ### Acesse o projeto aqui: <a href="https://hebert324.github.io/Web.finances/">Web.finance$</a>
 
+## :memo: Licença
+
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](.github/LICENSE.md) para mais detalhes.
+
 ---
 
-Desenvolvido por [Hebert Rocha](https://www.linkedin.com/in/hebert-rc/) juntamente a [Rocketseat](https://app.rocketseat.com.br/dashboard) :wave: 
+Desenvolvido por [Hebert Rocha](https://www.linkedin.com/in/hebert-rc/) juntamente a [Rocketseat](https://app.rocketseat.com.br/dashboard) :wave:
